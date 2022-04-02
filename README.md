@@ -5,4 +5,10 @@ Hi. I decided to build this instagram clone app from youtube tutorial to underst
 The tutorial is from freeCodeCamp.org and you can find it on their youtube channel: [link](https://www.youtube.com/watch?v=mDgEqoQUBgk&t=2814s&ab_channel=freeCodeCamp.org)
 
 ## What have I learnd from this tutorial
+
+- at the begining with Karl, we created setup for project like folder structure and instaliing the needed packages.
+- after this I connected the project with firebase. I created file name firebase.js in lib where I add the date download from trutorial to the base, at the file, there is a config where I initilize app.
+- then I go and created the first page which was the login page. In the login page, when user log in with is email and password there is function auth with signInWithEmailAndPassword, then firebase check is email and password is correct if yes the we go to the main page.
+- after the login page is it have to created another page which is signup page. During created an account the is a function called doesUsernameExsit. This function checks if username exist or no. If yes then user need to figure out new username.
+
 # instagram-tutorial-yt
