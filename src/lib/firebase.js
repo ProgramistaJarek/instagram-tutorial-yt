@@ -3,8 +3,10 @@ import "firebase/compat/firestore";
 import "firebase/compat/auth";
 //import { seedDatabase } from "../seed";
 
+const MY_KEY = process.env.REACT_APP_API_KEY;
+
 const config = {
-  apiKey: "AIzaSyDE-cTBZPl5sZpL1zbHfBMD9gBAj_SAVZg",
+  apiKey: MY_KEY,
   authDomain: "instagram-67c23.firebaseapp.com",
   projectId: "instagram-67c23",
   storageBucket: "instagram-67c23.appspot.com",
