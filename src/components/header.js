@@ -8,7 +8,7 @@ function Header() {
   const { firebase } = useContext(FirebaseContext);
   const { user } = useContext(UserContext);
 
-  console.log(user);
+  //console.log("user", user);
 
   return (
     <header className="h-16 bg-white border-b border-gray-primary mb-8">
@@ -70,10 +70,10 @@ function Header() {
                   </svg>
                 </button>
                 <div className="flex items-center cursor-pointer">
-                  <Link to={`/p/${user.displaName}`}>
+                  <Link to={`/p/${user.username}`}>
                     <img
                       className="rounded-full h-8 w-8 flex"
-                      src={`/images/avatars/${user.displaName}.jpg`}
+                      src={`/images/avatars/${user.username}.jpg`}
                       alt={`${user.displaName} profile`}
                     />
                   </Link>
