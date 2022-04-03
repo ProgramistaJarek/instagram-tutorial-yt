@@ -10,6 +10,6 @@ The tutorial is from freeCodeCamp.org and you can find it on their youtube chann
 - after this I connected the project with firebase. I created file name firebase.js in lib folder where I add the date download from trutorial to the firestore, at the file, there is a config where I initilize app.
 - then I go and created the first page which was the login page. In the login page, when user log in with is email and password there is function auth with signInWithEmailAndPassword, then firebase check is email and password is correct if yes the we go to the main page.
 - after the login page is it have to created another page which is signup page. During created an account the is a function called doesUsernameExsit. This function checks if username exist or no. If yes then user need to figure out new username.
-- started working on the main page - dashboard - it has 3 components. 
+- started working on the main page - dashboard - it has 3 components.
 
 # instagram-tutorial-yt
