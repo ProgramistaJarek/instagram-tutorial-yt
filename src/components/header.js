@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import FirebaseContext from "../context/firebase";
-import UserContext from "../context/user";
-import * as ROUTES from "../constants/routes";
-import useUser from "../hooks/use-user";
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import FirebaseContext from '../context/firebase';
+import UserContext from '../context/user';
+import * as ROUTES from '../constants/routes';
+import useUser from '../hooks/use-user';
+import Skeleton from 'react-loading-skeleton';
 
 function Header() {
   const { firebase } = useContext(FirebaseContext);
@@ -49,7 +50,7 @@ function Header() {
                   title="Sign Out"
                   onClick={() => firebase.auth().signOut()}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") {
+                    if (e.key === 'Enter') {
                       firebase.auth().signOut();
                     }
                   }}
@@ -71,11 +72,20 @@ function Header() {
                 </button>
                 <div className="flex items-center cursor-pointer">
                   <Link to={`/p/${user.username}`}>
-                    <img
-                      className="rounded-full h-8 w-8 flex"
-                      src={`/images/avatars/${user.username}.jpg`}
-                      alt={`${user.displaName} profile`}
-                    />
+                    {!user.username ? (
+                      <Skeleton
+                        borderRadius={9999}
+                        count={1}
+                        height={32}
+                        width={32}
+                      />
+                    ) : (
+                      <img
+                        className="rounded-full h-8 w-8 flex"
+                        src={`/images/avatars/${user.username}.jpg`}
+                        alt={`${user.displaName} profile`}
+                      />
+                    )}
                   </Link>
                 </div>
               </>

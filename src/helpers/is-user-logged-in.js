@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import { Navigate, Outlet } from "react-router-dom";
+import PropTypes from 'prop-types';
+import { Navigate, Outlet } from 'react-router-dom';
 
 function IsUserLoggedIn({ user, redirectPath, children }) {
   if (user) {
