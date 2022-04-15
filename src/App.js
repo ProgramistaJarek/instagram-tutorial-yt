@@ -4,6 +4,7 @@ import * as ROUTES from "./constants/routes";
 import "./styles/tailwind.css";
 import UserContext from "./context/user";
 import useAuthListener from "./hooks/use-auth-listener";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const Login = lazy(() => import("./pages/login"));
 const SignUp = lazy(() => import("./pages/sign-up"));
