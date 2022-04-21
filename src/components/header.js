@@ -84,6 +84,9 @@ function Header() {
                         className="rounded-full h-8 w-8 flex"
                         src={`/images/avatars/${user.username}.jpg`}
                         alt={`${user.displaName} profile`}
+                        onError={(e) => {
+                          e.target.src = `/images/avatars/default.png`;
+                        }}
                       />
                     )}
                   </Link>

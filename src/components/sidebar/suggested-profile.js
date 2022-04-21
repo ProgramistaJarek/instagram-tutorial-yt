@@ -1,10 +1,10 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import {
   updateLoggedInUserFollowing,
   updateFollowedUserFollowers,
-} from "../../services/firebase";
+} from '../../services/firebase';
 
 function SuggestedProfile({
   profileDocId,
@@ -29,6 +29,9 @@ function SuggestedProfile({
           className="rounded-full w-8 flex mr-3"
           src={`/images/avatars/${username}.jpg`}
           alt=""
+          onError={(e) => {
+            e.target.src = `/images/avatars/default.png`;
+          }}
         />
         <Link to={`/p/${username}`}>
           <p className="font-bold text-sm">{username}</p>

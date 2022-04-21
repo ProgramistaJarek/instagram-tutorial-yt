@@ -51,11 +51,18 @@ function Header({
   return (
     <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg">
       <div className="container flex justify-center">
-        <img
-          className="rounded-full h-40 w-40 flex"
-          alt={`${profileUsername} profile`}
-          src={`/images/avatars/${profileUsername}.jpg`}
-        />
+        {profileUsername ? (
+          <img
+            className="rounded-full h-40 w-40 flex"
+            alt={`${profileUsername} profile`}
+            src={`/images/avatars/${profileUsername}.jpg`}
+            onError={(e) => {
+              e.target.src = `/images/avatars/default.png`;
+            }}
+          />
+        ) : (
+          <Skeleton count={1} width={160} height={160} />
+        )}
       </div>
       <div className="flex items-center justify-center flex-col col-span-2">
         <div className="container flex items-center">
