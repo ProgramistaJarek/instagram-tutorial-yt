@@ -4,12 +4,25 @@ Hi. I decided to build this instagram clone app from youtube tutorial to underst
 
 The tutorial is from freeCodeCamp.org and you can find it on their youtube channel: [link](https://www.youtube.com/watch?v=mDgEqoQUBgk&t=2814s&ab_channel=freeCodeCamp.org)
 
+## Tools
+
+- React
+- Firebase
+- Tailwind CSS
+
 ## What have I done / what have I learned
 
-- at the begining with Karl, we created setup for project like folder structures and instaliing the needed packages.
-- after this I connected the project with firebase. I created file name firebase.js in lib folder where I add the date download from trutorial to the firestore, at the file, there is a config where I initilize app.
-- then I go and created the first page which was the login page. In the login page, when user log in with is email and password there is function auth with signInWithEmailAndPassword, then firebase check is email and password is correct if yes the we go to the main page.
-- after the login page is it have to created another page which is signup page. During created an account the is a function called doesUsernameExsit. This function checks if username exist or no. If yes then user need to figure out new username.
-- started working on the main page - dashboard - it has 3 components.
+- At the start I can saw how should look the basic setup for project like folder structures and instaliing the needed packages.
+- After this I connected the project with firebase. Firebase firestore handles all the data from the project.
+- Then I go and created the first page which was the login page. In the login page, when user log in with is email and password there is function auth with signInWithEmailAndPassword, then firebase check is email and password is correct if yes then we go to the main page.
+- After the login page is it have to created another page which is signup page. During created an account the is a function called doesUsernameExsit. This function checks if username exist or no. If yes then user need to figure out new username.
+- The project I have built following pages like: login, sign up, dashboard and user profile page.
+- I learnt how to use useContext and how create it. And also how useful it can be to pass some data.
+- I learnt how to create custom hooks in react, like in this project hook for checking if user is log in or no.
+- Another nice cool feature I learn during this course is protected route that if the user is log in then he can visit certain page.
+
+## Summary
+
+I am very happy that I have survive to the end of the tutorial because I feel that I have learn o lot of things and I am ready to use them in the future.
 
 # instagram-tutorial-yt
